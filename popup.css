@@ -123,6 +123,27 @@
   --grad-hdr:  linear-gradient(135deg,#0C2340 0%,#1E40AF 55%,#0369A1 100%);
 }
 
+/* Specific overrides for link items in dark mode */
+[data-theme="dark"] .li { color: var(--t1); }
+[data-theme="dark"] .li:hover { background: var(--surface3); }
+[data-theme="dark"] .li-href { color: var(--t4); }
+[data-theme="dark"] .li-error { color: #F87171; }
+[data-theme="dark"] .lb.err { background: #451A1A; color: #FCA5A5; border-color: #EF4444; }
+
+/* Fix Toast and Button visibility in dark mode */
+[data-theme="dark"] .toast { background: var(--blue-xl); color: #fff; border: 1px solid var(--blue); }
+[data-theme="dark"] .btn.blue { color: #0F172A; }
+[data-theme="dark"] .btn.blue:hover { color: #fff; }
+
+/* Improve active states contrast */
+[data-theme="dark"] .nb.active, 
+[data-theme="dark"] .lf.active,
+[data-theme="dark"] .ht-btn.active {
+  background: var(--blue);
+  color: #0F172A;
+  border-color: var(--blue);
+}
+
 html,body{width:790px;min-height:580px;background:var(--bg);color:var(--t1);font-family:var(--font);font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
 ::-webkit-scrollbar{width:5px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
